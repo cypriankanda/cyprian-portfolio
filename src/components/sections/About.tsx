@@ -41,43 +41,43 @@ const About = () => {
   
   const experience = [
     {
-      position: 'Senior Full Stack Developer',
-      company: 'Tech Innovations Inc.',
-      period: '2021 - Present',
-      description: 'Leading development of enterprise applications, mentoring junior developers, and implementing modern architecture patterns.'
+      position: 'UI UX Designer',
+      company: 'Pullova Technologies LTD.',
+      period: '2023 - Present',
+      description: 'Leading design of enterprise applications, mentoring junior designers, and implementing modern architecture patterns.'
     },
     {
-      position: 'UI/UX Designer & Frontend Developer',
-      company: 'Creative Digital Agency',
-      period: '2019 - 2021',
-      description: 'Designed and developed user interfaces for clients across various industries, focusing on responsive design and accessibility.'
+      position: 'Software & Network Intern',
+      company: 'ICT Authority HQ',
+      period: '2023 - 2023',
+      description: 'Designed and developed user interfaces and network solutions for ministry of ICT, focusing on responsive design and accessibility.'
     },
     {
-      position: 'Python Backend Developer',
-      company: 'Data Solutions Ltd.',
-      period: '2017 - 2019',
-      description: 'Built RESTful APIs and data processing pipelines using Flask and PostgreSQL for financial technology applications.'
+      position: 'Technical support',
+      company: 'Eldoret Family Mart.',
+      period: '2020 - Present ',
+      description: 'Offer technical support for EFM POS systems.'
     }
   ];
   
   const education = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'Tech University',
-      period: '2015 - 2017',
-      description: 'Specialized in software engineering and human-computer interaction. Graduated with honors.'
+      degree: 'Software Engineering',
+      institution: 'Moringa School',
+      period: '2025 - 2025',
+      description: 'Specialized in Full Stack software engineering.'
     },
     {
-      degree: 'Bachelor of Science in Software Engineering',
-      institution: 'National Institute of Technology',
-      period: '2011 - 2015',
-      description: 'Foundation in programming, algorithms, and software development methodologies.'
+      degree: 'Certified Ethical Hacker',
+      institution: 'Strathmore University | CyberShujaa',
+      period: '2024 - 2024',
+      description: 'Foundation in Pentesting, Cybersecurity, and vulnerability methodologies.'
     },
     {
-      degree: 'Professional Certification in UI/UX Design',
-      institution: 'Design Academy',
-      period: '2016',
-      description: 'Intensive program covering user research, interaction design, and visual design principles.'
+      degree: 'Bachelor Science in Computer Science',
+      institution: 'Kabarak University',
+      period: '2020 - 2024',
+      description: 'Specialized in software engineering and UI UX Design. Graduated with BSC.'
     }
   ];
 
@@ -97,17 +97,17 @@ const About = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
           <div className="glass p-6 text-center animate-fade-in" style={{animationDelay: '0.1s'}}>
-            <div className="text-4xl font-bold text-accent mb-2">5+</div>
+            <div className="text-4xl font-bold text-accent mb-2">3+</div>
             <div className="text-muted-foreground">Years Experience</div>
           </div>
           
           <div className="glass p-6 text-center animate-fade-in" style={{animationDelay: '0.2s'}}>
-            <div className="text-4xl font-bold text-accent mb-2">50+</div>
+            <div className="text-4xl font-bold text-accent mb-2">20+</div>
             <div className="text-muted-foreground">Projects Completed</div>
           </div>
           
           <div className="glass p-6 text-center animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <div className="text-4xl font-bold text-accent mb-2">30+</div>
+            <div className="text-4xl font-bold text-accent mb-2">15+</div>
             <div className="text-muted-foreground">Happy Clients</div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const About = () => {
           <div className="lg:col-span-1 animate-fade-in" style={{animationDelay: '0.2s'}}>
             <h3 className="text-2xl font-serif font-bold mb-6">My Journey</h3>
             <p className="text-muted-foreground mb-6">
-              With over 5 years of professional experience, I've cultivated a deep understanding 
+              With over 3 years of professional experience, I've cultivated a deep understanding 
               of both frontend and backend technologies, allowing me to create cohesive full-stack solutions.
             </p>
             <p className="text-muted-foreground mb-6">

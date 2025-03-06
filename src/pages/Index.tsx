@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import NavBar from '@/components/navigation/NavBar';
 import Hero from '@/components/sections/Hero';
@@ -7,6 +6,7 @@ import Services from '@/components/sections/Services';
 import Portfolio from '@/components/sections/Portfolio';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const Index = () => {
   useEffect(() => {
@@ -69,6 +69,7 @@ const Index = () => {
       {/* Main content */}
       <div className="relative z-10">
         <NavBar />
+        <ThemeToggle />
         <main>
           <Hero />
           <About />
