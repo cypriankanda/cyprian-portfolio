@@ -30,15 +30,26 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <Button className="btn-primary flex items-center gap-2">
+              <Button 
+                className="btn-primary flex items-center gap-2"
+                onClick={() => {
+                  const portfolioSection = document.getElementById('portfolio');
+                  if (portfolioSection) {
+                    window.scrollTo({
+                      top: portfolioSection.offsetTop - 100,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
                 View My Work
                 <ArrowRight size={16} />
               </Button>
               
-              <Button className="btn-outline flex items-center gap-2">
+              <a href="/cyprian-kanda-cv.pdf" download className="btn-outline flex items-center gap-2">
                 <Download size={16} />
-                Resume
-              </Button>
+                Download CV
+              </a>
             </div>
             
             <div className="flex items-center gap-6 pt-2 animate-fade-in" style={{animationDelay: '0.5s'}}>

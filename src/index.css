@@ -16,8 +16,8 @@
     --popover: 230 30% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 120 100% 50%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 220 70% 22%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 230 25% 15%;
     --secondary-foreground: 210 40% 98%;
@@ -25,26 +25,26 @@
     --muted: 230 25% 15%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 120 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 220 70% 22%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 230 20% 15%;
     --input: 230 20% 15%;
-    --ring: 120 100% 50%;
+    --ring: 220 70% 22%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 230 35% 7%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 120 100% 50%;
-    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-primary: 220 70% 22%;
+    --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 230 25% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 230 20% 15%;
-    --sidebar-ring: 120 100% 50%;
+    --sidebar-ring: 220 70% 22%;
   }
 
   * {
@@ -104,5 +104,26 @@
   
   .project-card {
     @apply glass p-5 transition-all duration-300 hover:shadow-[0_0_15px_rgba(46,213,115,0.15)] hover-scale;
+  }
+
+  .service-card {
+    @apply bg-card p-8 rounded-md transition-transform duration-300 hover:-translate-y-1 border border-border/40;
+  }
+
+  .service-icon {
+    @apply w-12 h-12 flex items-center justify-center bg-secondary rounded-md mb-6;
+  }
+
+  .service-list {
+    @apply flex flex-col space-y-3 mt-4;
+  }
+
+  .service-item {
+    @apply flex items-center text-muted-foreground;
+  }
+
+  .service-item:before {
+    content: "»";
+    @apply mr-2 text-accent/80;
   }
 }

@@ -1,49 +1,46 @@
 
-import { Code, Palette, Server, Layout, Bot, Smartphone } from 'lucide-react';
+import { Code, Palette, Server, Layout, Bot, Smartphone, Image } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Services = () => {
   const services = [
     {
-      icon: <Code className="h-10 w-10" />,
-      title: 'Frontend Development',
-      description: 'Creating responsive and interactive user interfaces with React, TypeScript, and modern CSS frameworks.',
-      delay: '0.1s'
-    },
-    {
-      icon: <Server className="h-10 w-10" />,
-      title: 'Backend Development',
-      description: 'Building robust server-side applications with Flask, Python, and SQL/NoSQL databases.',
-      delay: '0.2s'
-    },
-    {
-      icon: <Palette className="h-10 w-10" />,
+      icon: <Palette className="h-8 w-8 text-foreground" />,
       title: 'UI/UX Design',
-      description: 'Designing intuitive user interfaces and experiences with a focus on usability and aesthetics.',
-      delay: '0.3s'
+      items: [
+        'Landing Pages',
+        'User Flow',
+        'Wireframing',
+        'Prototyping',
+        'Mobile App Design',
+      ]
     },
     {
-      icon: <Layout className="h-10 w-10" />,
-      title: 'Web Application Development',
-      description: 'Full-stack development of custom web applications tailored to specific business needs.',
-      delay: '0.4s'
+      icon: <Code className="h-8 w-8 text-foreground" />,
+      title: 'Development',
+      items: [
+        'HTML/CSS',
+        'JavaScript',
+        'Animation',
+        'WordPress',
+        'React',
+      ]
     },
     {
-      icon: <Bot className="h-10 w-10" />,
-      title: 'API Development & Integration',
-      description: 'Creating and integrating RESTful APIs to connect various services and systems.',
-      delay: '0.5s'
-    },
-    {
-      icon: <Smartphone className="h-10 w-10" />,
-      title: 'Responsive Design',
-      description: 'Ensuring applications look and function perfectly across all devices and screen sizes.',
-      delay: '0.6s'
+      icon: <Image className="h-8 w-8 text-foreground" />,
+      title: 'Illustration',
+      items: [
+        'Character Design',
+        'Icon Set',
+        'Illustration Guide',
+        'Illustration Set',
+        'Motion Graphic',
+      ]
     }
   ];
 
   return (
-    <section id="services" className="section-padding py-20 bg-secondary/20">
+    <section id="services" className="section-padding py-20 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="inline-block text-4xl font-serif font-bold mb-4 relative">
@@ -60,18 +57,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className={cn(
-                "glass p-8 transition-all duration-300",
-                "hover:shadow-[0_0_20px_rgba(46,213,115,0.15)] hover:translate-y-[-5px]",
-                "border border-white/5 animate-fade-in"
-              )}
-              style={{animationDelay: service.delay}}
+              className="service-card animate-fade-in"
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="p-4 rounded-lg bg-secondary inline-block mb-6">
+              <div className="service-icon">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-medium mb-3">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <h3 className="text-2xl font-medium mb-4">{service.title}</h3>
+              <ul className="service-list">
+                {service.items.map((item, idx) => (
+                  <li key={idx} className="service-item">{item}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
