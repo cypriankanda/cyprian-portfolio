@@ -1,4 +1,3 @@
-
 import { ArrowRight, Download, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -32,15 +31,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center gap-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
               <Button 
                 className="btn-primary flex items-center gap-2"
-                onClick={() => {
-                  const portfolioSection = document.getElementById('portfolio');
-                  if (portfolioSection) {
-                    window.scrollTo({
-                      top: portfolioSection.offsetTop - 100,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
+                onClick={() => window.open("https://www.behance.net/cyprianboit", "_blank")}
               >
                 View My Work
                 <ArrowRight size={16} />
