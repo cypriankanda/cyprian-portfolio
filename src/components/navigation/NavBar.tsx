@@ -35,8 +35,9 @@ const NavBar = () => {
     const scrollY = window.pageYOffset;
     
     for (const section of sections) {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = (section as HTMLElement).offsetTop - 100;
+      const sectionElement = section as HTMLElement;
+      const sectionHeight = sectionElement.offsetHeight;
+      const sectionTop = sectionElement.offsetTop - 100;
       const sectionId = section.getAttribute('id');
       
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
