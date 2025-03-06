@@ -23,28 +23,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Prepare email parameters
+    const emailSubject = encodeURIComponent(formData.subject);
+    const emailBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
+    
+    // Open default email client
+    window.location.href = `mailto:cypriankkanda@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    
+    // Show success message
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Email client opened!",
+        description: "Your message has been prepared in your default email client.",
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    }, 1500);
+    }, 1000);
   };
   
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-accent" />,
       title: 'Email',
-      details: 'cyprian.kanda@example.com',
-      link: 'mailto:cyprian.kanda@example.com'
+      details: 'cypriankkanda@gmail.com',
+      link: 'mailto:cypriankkanda@gmail.com'
     },
     {
       icon: <Phone className="h-6 w-6 text-accent" />,
@@ -83,16 +84,18 @@ const Contact = () => {
                 <a 
                   key={index} 
                   href={info.link} 
-                  className="flex items-start hover:text-accent transition-colors duration-300"
+                  className="flex items-start hover:text-accent transition-colors duration-300 group"
                   target={info.title === 'Location' ? "_blank" : "_self"}
                   rel="noopener noreferrer"
                 >
-                  <div className="p-2 bg-secondary/60 rounded-lg mr-4">
+                  <div className="p-2 bg-secondary/60 rounded-lg mr-4 flex-shrink-0">
                     {info.icon}
                   </div>
-                  <div>
+                  <div className="overflow-hidden">
                     <h4 className="font-medium">{info.title}</h4>
-                    <span className="text-muted-foreground">{info.details}</span>
+                    <span className="text-muted-foreground text-sm md:text-base break-words w-full block">
+                      {info.details}
+                    </span>
                   </div>
                 </a>
               ))}

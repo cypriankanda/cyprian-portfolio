@@ -13,7 +13,7 @@ const Index = () => {
     // Add a custom cursor effect (optional)
     const cursor = document.createElement('div');
     cursor.className = 'hidden md:block fixed w-6 h-6 rounded-full pointer-events-none z-50 transition-transform duration-200 ease-out';
-    cursor.style.background = 'rgba(46, 213, 115, 0.5)';
+    cursor.style.background = 'rgba(18, 45, 94, 0.5)'; // Dark navy blue cursor
     cursor.style.transform = 'translate(-50%, -50%)';
     cursor.style.mixBlendMode = 'difference';
     document.body.appendChild(cursor);
