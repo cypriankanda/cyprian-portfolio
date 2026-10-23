@@ -42,7 +42,7 @@ const Portfolio = () => {
       category: ['web', 'ui'],
       image: adornedRootsAfrica,
       description: 'A jewelry studio for artisan brass, cowrie, and calabash pieces handmade in Kenya and Tanzania, with shop, rental, membership, and events.',
-      technologies: ['React', 'TanStack Router', 'Tailwind CSS', 'Vite'],
+      technologies: ['React', 'TanStack Router', 'Tailwind CSS', 'Vite', 'Stripe', 'Paystack'],
       link: 'https://www.adornedrootsafrica.com'
     },
     {
@@ -51,7 +51,7 @@ const Portfolio = () => {
       category: ['web', 'ui', 'app'],
       image: pullovaBeauty,
       description: 'An on-demand beauty platform for booking verified professionals for hair, makeup, nails, and grooming at home, work, or anywhere.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'React Router', 'Vite'],
       link: 'https://beauty-pullova.vercel.app'
     },
     {
@@ -60,7 +60,7 @@ const Portfolio = () => {
       category: ['web', 'ui', 'app'],
       image: mwalimuSwap,
       description: 'A Teachers Service Commission transfer portal where educators find vacancies, apply, track approvals, and swap stations across Kenya.',
-      technologies: ['React', 'Tailwind CSS', 'Mapbox', 'Vite'],
+      technologies: ['React', 'Tailwind CSS', 'Supabase', 'Mapbox', 'Recharts', 'Vite'],
       link: 'https://smooth-transfer-portal.vercel.app/'
     }
   ];
@@ -126,12 +126,15 @@ const Portfolio = () => {
               </div>
               <h3 className="text-xl font-medium mb-2">{project.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="text-xs bg-secondary/80 px-2 py-1 rounded-full">
-                    {tech}
-                  </span>
-                ))}
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-2">Tech stack</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, idx) => (
+                    <span key={idx} className="text-xs bg-secondary/80 px-2 py-1 rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
