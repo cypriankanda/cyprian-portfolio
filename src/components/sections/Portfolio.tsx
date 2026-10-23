@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import dashboardDesign from '@/assets/images/Dashboard.png';
+import dmsServices from '@/assets/images/p.png';
+import adornedRootsAfrica from '@/assets/images/adorned-roots-africa.jpg';
+import pullovaBeauty from '@/assets/images/pullova-beauty.jpg';
+import mwalimuSwap from '@/assets/images/mwalimu-swap.jpg';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
@@ -17,7 +22,7 @@ const Portfolio = () => {
       id: 1,
       title: 'Dashboard Design',
       category: ['ui', 'web'],
-      image: '/src/assets/images/Dashboard.png',
+      image: dashboardDesign,
       description: 'A modern and intuitive dashboard interface with clean design and user-friendly navigation.',
       technologies: ['Figma', 'UI/UX', 'React', 'Tailwind CSS'],
       link: 'https://www.behance.net/gallery/209861385/Car-Rental-UI'
@@ -26,10 +31,37 @@ const Portfolio = () => {
       id: 2,
       title: 'DMS Services',
       category: ['web', 'ui'],
-      image: '/src/assets/images/p.png',
+      image: dmsServices,
       description: 'A responsive portfolio website showcasing creative work and professional experience.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
       link: 'https://www.behance.net/gallery/220115227/Data-Management-Website-UI-Design'
+    },
+    {
+      id: 3,
+      title: 'Adorned Roots Africa',
+      category: ['web', 'ui'],
+      image: adornedRootsAfrica,
+      description: 'A jewelry studio for artisan brass, cowrie, and calabash pieces handmade in Kenya and Tanzania, with shop, rental, membership, and events.',
+      technologies: ['React', 'TanStack Router', 'Tailwind CSS', 'Vite'],
+      link: 'https://www.adornedrootsafrica.com'
+    },
+    {
+      id: 4,
+      title: 'Pullova Beauty',
+      category: ['web', 'ui', 'app'],
+      image: pullovaBeauty,
+      description: 'An on-demand beauty platform for booking verified professionals for hair, makeup, nails, and grooming at home, work, or anywhere.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      link: 'https://beauty-pullova.vercel.app'
+    },
+    {
+      id: 5,
+      title: 'Mwalimu Swap',
+      category: ['web', 'ui', 'app'],
+      image: mwalimuSwap,
+      description: 'A Teachers Service Commission transfer portal where educators find vacancies, apply, track approvals, and swap stations across Kenya.',
+      technologies: ['React', 'Tailwind CSS', 'Mapbox', 'Vite'],
+      link: 'https://smooth-transfer-portal.vercel.app/'
     }
   ];
   
