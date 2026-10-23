@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import portrait from '@/assets/images/cbk.JPG';
-import cv from '@/assets/documents/CBKANDA CV.pdf';
+import cv from '@/assets/documents/Cyprian_Kanda_Resume.pdf';
 
 const Hero = () => {
   return (
@@ -42,7 +42,7 @@ const Hero = () => {
                 <ArrowRight size={16} />
               </Button>
               
-              <a href={cv} download className="btn-outline flex items-center gap-2">
+              <a href={cv} download="Cyprian_Kanda_Resume.pdf" className="btn-outline flex items-center gap-2">
                 <Download size={16} />
                 Download CV
               </a>
