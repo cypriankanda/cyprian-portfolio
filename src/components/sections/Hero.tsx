@@ -1,5 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import portrait from '@/assets/images/cbk.JPG';
+import cv from '@/assets/documents/CBKANDA CV.pdf';
 
 const Hero = () => {
   return (
@@ -40,7 +42,7 @@ const Hero = () => {
                 <ArrowRight size={16} />
               </Button>
               
-              <a href="/src/assets/documents/CBKANDA CV.pdf" download className="btn-outline flex items-center gap-2">
+              <a href={cv} download className="btn-outline flex items-center gap-2">
                 <Download size={16} />
                 Download CV
               </a>
@@ -63,7 +65,7 @@ const Hero = () => {
             <div className="relative z-10 w-full h-[500px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent mix-blend-overlay"></div>
               <img 
-                src="/src/assets/images/cbk.JPG" 
+                src={portrait} 
                 alt="Cyprian Kanda" 
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
               />
